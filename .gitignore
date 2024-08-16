@@ -28,3 +28,8 @@ secrets.txt
 # Ignore temporary files
 *.tmp
 *.bak
+
+# Ignore RSA keys
+*.rsa
+*.pub
+*.pem
