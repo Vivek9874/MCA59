@@ -1,0 +1,5 @@
+body {
+    margin: auto;
+    padding: auto;
+    background: linear-gradient(90deg, rgb(234, 75, 194) 0%, rgb(175, 71, 212) 35%, rgba(0,212,255,1) 100%);
+  }

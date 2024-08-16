@@ -1,0 +1,84 @@
+.registration-details {
+    padding: 20px;
+  }
+  
+  .registration-item {
+    --padding-start: 0;
+  }
+  
+  .registration-label {
+    font-weight: bold;
+    width: 30%;
+    color: #007bff; /* Blue color */
+  }
+  
+  .registration-text {
+    width: 70%;
+  }
+  
+  .registration-subtext {
+    font-size: smaller;
+    color: #666;
+  }
+  
+  
+  
+  /* Applying styles similar to tab1.scss */
+  .form-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-content {
+    padding: 20px;
+  }
+  
+  .form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form-list {
+    margin-bottom: 20px;
+  }
+  
+  .form-item {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #007bff; /* Blue color */
+  }
+  
+  .form-input {
+    border-radius: 5px;
+    border: 1px solid #007bff; /* Blue color */
+    padding: 10px;
+  }
+  
+  /* Adding spacing between year of passing and total marks */
+  .year-total-spacing {
+    margin-right: 10px;
+
+  }
+  
+  /* Adding space between label and text */
+  .registration-item ion-label {
+    padding-right: 10px;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+  }
+  
+  .reset-button {
+    margin-top: 10px;
+  }
+  .no-data-message {
+    text-align: center;
+    color: #dc3545; /* Red color */
+    margin-top: 10px;
+  }

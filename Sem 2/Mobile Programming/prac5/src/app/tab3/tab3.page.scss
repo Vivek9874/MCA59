@@ -1,0 +1,25 @@
+
+ion-content {
+    --ion-background-color: linear-gradient(135deg, #FFB6C1, #FFD700, #32CD32, #4169E1, #9400D3); /* Set background color for the content */
+  }
+  
+  ion-header ion-title {
+    font-family: 'Comic Sans MS', cursive; /* Use a playful font for titles */
+    color: #333; /* Set color for titles */
+  }
+  
+  ion-item ion-label {
+    font-family: 'Comic Sans MS', cursive; /* Use a playful font for item labels */
+    color: #333; /* Set color for item labels */
+  }
+  
+  .you-label {
+    font-weight: bold; /* Make the label text bold */
+    color: blue; /* Change the color of the label text to blue */
+    font-size: large;
+  }
+  
+  ion-img {
+    width: 100%; /* Set image width to 100% of its container */
+  }
+  

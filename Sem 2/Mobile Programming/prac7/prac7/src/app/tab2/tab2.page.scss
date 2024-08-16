@@ -1,0 +1,25 @@
+ion-content {
+    background-color: #f5f5f5;
+    padding: 20px;
+
+    ion-item {
+        --background: #ffcccc;
+        --border-radius: 10px; 
+        --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin-bottom: 30px;
+
+        ion-label {
+            color: #666;
+        }
+    }
+
+    ion-button {
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,40 @@
+/* Style form container */
+/* Style form container */
+.form-container {
+  border: 1px solid #ccc; /* Thin border */
+  padding: 20px; /* Add padding inside the container */
+  margin-bottom: 20px; /* Add space below the form container */
+  margin-left: 10px; /* Add left margin for gap from the edge of the screen */
+  margin-right: 10px; /* Add right margin for gap from the edge of the screen */
+}
+/* Add padding and border to the form */
+.form-with-border {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.logo-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style form items */
+.form-input {
+  height: 30px; /* Adjust height as needed */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Optional: Adjust input height and font size */
+.form-input {
+  height: 30px; /* Adjust height as needed */
+  font-size: 16px; /* Adjust font size as needed */
+}
+.small-input {
+  width: 50%; /* Adjust the width as per your requirement */
+}
+
+
+/* Center align labels vertically */
+ion-label {
+  display: flex;
+  align-items: center;
+}

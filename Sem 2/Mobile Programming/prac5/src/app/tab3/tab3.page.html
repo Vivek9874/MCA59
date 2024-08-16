@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Leaderboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngIf="myScore !== undefined">
+      <ion-avatar slot="end">
+        <ion-img [src]="'../../assets/2.JPG'"></ion-img>
+      </ion-avatar>
+      <ion-label class="you-label">{{ myRank }}. YOU - {{ myScore }} marks</ion-label>
+    </ion-item>
+    <ion-item *ngFor="let player of players; let i = index">
+      <ion-avatar slot="end">
+        <ion-img [src]="'../../assets/' + (i + 1) + '.JPG'"></ion-img>
+      </ion-avatar>
+      <ion-label>{{ i + 1 }}. {{ player.name }} - {{ player.score }} marks</ion-label>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

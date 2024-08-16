@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calendar</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="openEventModal()">
+        <ion-icon name="add" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="year-month-navigation">
+    <div class="month-navigation">
+      <button (click)="previousMonth()">Previous</button>
+      <span>{{ currentYear }}</span>
+      <select [(ngModel)]="currentMonth" (change)="changeMonth()">
+        <option *ngFor="let month of months" [value]="month.index">{{ month.name }}</option>
+      </select>
+      <button (click)="nextMonth()">Next</button>
+    </div>
+    <div class="year-navigation">
+      <button (click)="previousYear()">Previous Year</button>
+      <span>{{ currentYear }}</span>
+      <button (click)="nextYear()">Next Year</button>
+    </div>
+  </div>
+  <div class="calendar-container">
+    <div class="calendar-grid">
+      <div class="calendar-header">
+        <div *ngFor="let day of daysOfWeek" class="day-header">{{ day }}</div>
+      </div>
+      <div *ngFor="let week of currentMonthData.weeks" class="week">
+        <div *ngFor="let day of week" class="day" (click)="selectDay(day)">
+          <span class="day-number">{{ day.day }}</span>
+          <div *ngIf="day.events.length > 0" class="event-indicator"></div>
+          <div *ngFor="let event of day.events" class="event">
+            {{ event.title }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="showEventModal">
+  <ion-toolbar>
+    <ion-title>{{ event.date ? 'Edit Event' : 'Add Event' }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="saveEvent()">
+        <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-item>
+    <ion-label position="stacked">Title</ion-label>
+    <ion-input type="text" [(ngModel)]="event.title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-textarea [(ngModel)]="event.description"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Date</ion-label>
+    <ion-datetime
+      [(ngModel)]="event.date"
+      displayFormat="MMM DD, YYYY"
+    ></ion-datetime>
+  </ion-item>
+</ion-footer>

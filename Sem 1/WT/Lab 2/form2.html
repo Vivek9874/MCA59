@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm();">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName">
+        <span class="error-message" id="firstNameError"></span><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName">
+        <span class="error-message" id="lastNameError"></span><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <span class="error-message" id="emailError"></span><br><br>
+
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId">
+        <span class="error-message" id="userIdError"></span><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <span class="error-message" id="passwordError"></span><br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword">
+        <span class="error-message" id="confirmPasswordError"></span><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var userId = document.getElementById("userId").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            var firstNameError = document.getElementById("firstNameError");
+            var lastNameError = document.getElementById("lastNameError");
+            var emailError = document.getElementById("emailError");
+            var userIdError = document.getElementById("userIdError");
+            var passwordError = document.getElementById("passwordError");
+            var confirmPasswordError = document.getElementById("confirmPasswordError");
+
+            firstNameError.textContent = "";
+            lastNameError.textContent = "";
+            emailError.textContent = "";
+            userIdError.textContent = "";
+            passwordError.textContent = "";
+            confirmPasswordError.textContent = "";
+
+            var isValid = true;
+
+            if (!firstName.trim()) {
+                firstNameError.textContent = "First Name is required";
+                isValid = false;
+            }
+
+            if (!lastName.trim()) {
+                lastNameError.textContent = "Last Name is required";
+                isValid = false;
+            }
+
+            if (!email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+                emailError.textContent = "Invalid email format";
+                isValid = false;
+            }
+
+            if (!userId.trim()) {
+                userIdError.textContent = "User ID is required";
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                passwordError.textContent = "Password must be at least 6 characters long";
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                confirmPasswordError.textContent = "Passwords do not match";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Registration successful!');
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

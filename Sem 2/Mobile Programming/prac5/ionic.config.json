@@ -1,0 +1,7 @@
+{
+  "name": "prac5",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

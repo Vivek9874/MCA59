@@ -1,0 +1,121 @@
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title class="form-title">PLACEMENTS HIGHLIGHTS</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-item (click)="showContent('placements')" class="menu-item">SUMMARY</ion-item>
+        <ion-item (click)="showContent('details')" class="menu-item">COMPANY DETAILS</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="form-title">PLACEMENTS HIGHLIGHTS</ion-title>
+      </ion-toolbar>
+    </ion-header>
+      
+    <ion-content class="ion-padding main-content">
+      <ion-img src="../../assets/Logo.JPG" class="logo-image"></ion-img>
+      <div class="placements-content" *ngIf="selectedContent === 'placements'">
+        <ion-card class="form-card">
+          <ion-card-content class="form-card-content">
+            Sardar Patel Institute of Technology continues to be ranked among the top colleges attracting the brightest students across the state as well as the country. We at SPIT are working to build enthusiastic engineers always willing to take up challenges as opportunities and apply their knowledge to tackle it. The Training and Placement Cell caters to the industrial training needs of students and provides placement services to students through campus interviews. Many multinational and well-known Indian conglomerates regularly visit our campus every year for their requirement of high calibre human resources.
+          </ion-card-content>
+        </ion-card>
+        <ion-img src="../../assets/Placements2.png"></ion-img>
+        <ion-img src="../../assets/placements.png"></ion-img>
+      </div>
+
+      <div class="details" *ngIf="selectedContent === 'details'">
+        <ion-card class="form-card">
+          <ion-card-header class="form-card-header">
+            <ion-card-title>Check out the details of a few of our top recruiters</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+        <ion-accordion-group>
+          <ion-accordion value="first" class="form-accordion custom-bg">
+            <ion-item slot="header" color="primary" class="form-item">
+              <ion-label>Morgan Stanley</ion-label>
+            </ion-item>
+            <div class="ion-padding form-accordion-content" slot="content">
+              <ion-img src="https://solace.com/wp-content/uploads/2019/01/MSCI-official-logo.png"></ion-img>
+              <ul>
+                <li>Company: Morgan Stanley</li>
+                <li>Job Profile: Technology Analyst</li>
+                <li>Location: Mumbai/Pune</li>
+                <li>Salary: 14.67 LPA</li>
+                <li>Corporate Feedback:
+                  <ion-img src="..\assets\Untitled.jpg"></ion-img>
+                </li>
+                <li><a href="https://drive.google.com/drive/folders/1Z56SPx2sZ_4VDnu4Eb3UF1hY58D7a3hM" target="_blank">Read Interview Experience of your seniors</a></li>
+              </ul>
+            </div>
+          </ion-accordion>
+          
+          <ion-accordion value="second" class="form-accordion custom-bg">
+            <ion-item slot="header" color="primary" class="form-item">
+              <ion-label>Deutsche Bank</ion-label>
+            </ion-item>
+            <div class="ion-padding form-accordion-content" slot="content">
+              <ion-img src="https://th.bing.com/th/id/OIP.yS-Z4zi9A_UM-jgSSv6DoAHaEK?rs=1&pid=ImgDetMain"></ion-img>
+              <ul>
+                <li>Company: Deutsche Bank</li>
+                <li>Job Profile: Technology Analyst</li>
+                <li>Location: Mumbai/Pune</li>
+                <li>Salary: 19.63 LPA</li>
+                <li>Corporate Feedback:
+                  <ion-img src="..\assets\Untitled2.jpg"></ion-img>
+                </li>
+                <li><a href="https://drive.google.com/drive/folders/1Zgpzcx5GU_jpm_S8NK5lREj4tXL6RTFk" target="_blank">Read Interview Experience of your seniors</a></li>
+              </ul>
+            </div>
+          </ion-accordion>
+        
+          <ion-accordion value="third" class="form-accordion custom-bg">
+            <ion-item slot="header" color="primary" class="form-item">
+              <ion-label>JP Morgan Chase</ion-label>
+            </ion-item>
+            <div class="ion-padding form-accordion-content" slot="content">
+              <ion-img src="https://th.bing.com/th/id/OIP.PsmBePOmI4AFqazhDFsmZQHaEK?rs=1&pid=ImgDetMain"></ion-img>
+              <ul>
+                <li>Company: JPMC</li>
+                <li>Job Profile: Corporate Risk</li>
+                <li>Location: Mumbai/Pune</li>
+                <li>Salary: 9 LPA</li>
+                <li>Corporate Feedback:
+                  <ion-img src="..\assets\Untitled3.png"></ion-img>
+                </li>
+                <li><a href="https://drive.google.com/drive/folders/1RFXK1MzdJCYimX2TxR9A98tgvYc7Jg2s" target="_blank">Read Interview Experience of your seniors</a></li>
+              </ul>
+            </div>
+          </ion-accordion>
+        
+          <ion-accordion value="fourth" class="form-accordion custom-bg">
+            <ion-item slot="header" color="primary" class="form-item">
+              <ion-label>PhonePe</ion-label>
+            </ion-item>
+            <ion-img src="https://th.bing.com/th/id/OIP.g96NXCfHKUpoExFUTw80TwHaIf?rs=1&pid=ImgDetMain"></ion-img>
+            <div class="ion-padding form-accordion-content" slot="content">
+              <ion-img src="https://th.bing.com/th/id/OIP.yS-Z4zi9A_UM-jgSSv6DoAHaEK?rs=1&pid=ImgDetMain"></ion-img>
+              <ul>
+                <li>Company: PhonePe</li>
+                <li>Job Profile: SDE</li>
+                <li>Location: Pune</li>
+                <li>Salary: 33 LPA</li>
+                <li><a href="https://drive.google.com/drive/folders/1olvjgKtL8QBjIOq_W_WvQf81lNL635ql" target="_blank">Read Interview Experience of your seniors</a></li>
+              </ul>
+            </div>
+          </ion-accordion>
+
+        </ion-accordion-group>
+        

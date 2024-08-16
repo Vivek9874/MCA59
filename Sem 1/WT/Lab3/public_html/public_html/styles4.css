@@ -1,0 +1,64 @@
+.container1{
+    background-color:   #ffeecc;
+    text-align: center;
+    padding: 40px 60px;
+}
+.img1{
+    position: relative;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.img1{
+    background-image: url("oc-gonzalez-xg8z_KhSorQ-unsplash_adobespark.jpg");
+    min-height: 90%;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+body, html, p{
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:   #ffeecc;
+    font-size: 20px;
+}
+@media only screen and (max-device-width: 1366px) {
+    .img1{
+        background-attachment: scroll;
+        background-size: cover;
+    }
+    .img1{
+        background-image: url("oc-gonzalez-xg8z_KhSorQ-unsplash_adobespark.jpg");
+    }
+    .column{
+        column-span: inherit;
+    }
+  
+}
+@media only screen and (max-device-width: 1366px){
+  #p1div,#h1d{
+        font-size: 50px !important;
+    }
+    #navb{
+       
+    }
+    img{
+        background-size: contain;
+    }
+}
+li > a:hover,
+li > a:focus {
+    text-decoration: none;
+    border-width: 4px;
+    background-color: rgb(255, 174, 0);
+    border-radius: 30px;
+}
+.h1d2{
+    color: #f5a70a;
+    padding-left: 10%; 
+    padding-bottom: 20px;   
+}
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+display: none;
+}

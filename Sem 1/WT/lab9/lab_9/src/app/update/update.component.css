@@ -1,0 +1,11 @@
+label{
+    margin-top: 1rem;
+}
+
+.delete-btn{
+    margin-left: 1rem;
+}
+
+.hidden{
+    display: none;
+}

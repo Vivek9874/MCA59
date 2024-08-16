@@ -1,0 +1,134 @@
+// .year-month-navigation {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 10px;
+//   }
+  
+//   .month-navigation,
+//   .year-navigation {
+//     display: flex;
+//     align-items: center;
+//   }
+  
+//   .calendar-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+  
+//   .calendar-grid {
+//     border: 1px solid #ccc;
+//   }
+  
+//   .calendar-header {
+//     display: flex;
+//     border-bottom: 1px solid #ccc;
+//   }
+  
+//   .day-header {
+//     flex: 1;
+//     text-align: center;
+//     padding: 10px;
+//   }
+  
+//   .week {
+//     display: flex;
+//   }
+  
+//   .day {
+//     flex: 1;
+//     border-right: 1px solid #ccc;
+//     border-bottom: 1px solid #ccc;
+//     min-height: 100px; /* Adjust height as needed */
+//     position: relative;
+//   }
+  
+//   .day-number {
+//     font-weight: bold;
+//     padding: 5px;
+//   }
+  
+//   .event-indicator {
+//     background-color: lightblue;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     width: 10px;
+//     height: 10px;
+//     border-radius: 50%;
+//   }
+  
+//   .event {
+//     background-color: lightblue;
+//     padding: 2px;
+//     margin-bottom: 2px;
+//   }
+  
+.year-month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .month-navigation,
+  .year-navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .calendar-grid {
+    border: 1px solid #ccc;
+  }
+  
+  .calendar-header {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .day-header {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .week {
+    display: flex;
+  }
+  
+  .day {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    min-height: 100px; /* Adjust height as needed */
+    position: relative;
+  }
+  
+  .day-number {
+    font-weight: bold;
+    padding: 5px;
+  }
+  
+  .event-indicator {
+    background-color: lightblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .event {
+    background-color: lightblue;
+    padding: 2px;
+    margin-bottom: 2px;
+  }
+  

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>HOME</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content [fullscreen]="true">
+    <div class="splash-screen" [ngClass]="{ 'hidden': !showSplashScreen }">
+      <img src="https://cdn.vectorstock.com/i/1000x1000/10/94/children-playroom-decoration-logo-playing-game-vector-30921094.webp" alt="Splash Screen Image">
+      <ion-spinner></ion-spinner>
+      <p>Loading...</p>
+    </div>
+
+  <div *ngIf="currentQuestionIndex < questions.length">
+    <h2>{{ questions[currentQuestionIndex].question }}</h2>
+    <ion-img [src]="questions[currentQuestionIndex].imageUrl"></ion-img>
+    <ion-list>
+      <ion-radio-group (ionChange)="checkAnswer($event.detail.value)">
+        <ion-item *ngFor="let option of questions[currentQuestionIndex].options">
+          <ion-label>{{ option }}</ion-label>
+          <ion-radio slot="start" [value]="option"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  <div *ngIf="currentQuestionIndex === questions.length">
+    <h2>Quiz completed! Your score is: {{ score }}</h2>
+    <ion-button (click)="restartQuiz()">Play again</ion-button>
+    <div class="message">
+      <ng-container *ngIf="score <= 2">YOU CAN DO BETTER. LET'S CHECK OUT OUR LESSONS FIRST</ng-container>
+      <ng-container *ngIf="score > 2">WELL DONE. CHECK OUT THE LEADERBOARD TO COMPETE WITH OTHER PLAYERS AROUND THE WORLD</ng-container>
+    </div>
+  </div>
+</ion-content>

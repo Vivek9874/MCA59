@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Camera
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="takePicture()">Take Picture</ion-button>
+  <ion-img [src]="capturedImage" *ngIf="capturedImage"></ion-img>
+</ion-content>

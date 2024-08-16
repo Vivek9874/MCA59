@@ -1,0 +1,36 @@
+ion-content {
+    --ion-background-color: linear-gradient(135deg, #FFB6C1, #FFD700, #32CD32, #4169E1, #9400D3); /* Set background color for the content */
+  }
+  
+  ion-header ion-title {
+    font-family: 'Comic Sans MS', cursive; /* Use a playful font for titles */
+    color: #333; /* Set color for titles */
+  }
+  
+  .menu-item {
+    font-family: 'Comic Sans MS', cursive; /* Use a playful font for menu items */
+    color: #333; /* Set color for menu items */
+  }
+  
+  .home,
+  .alphabets,
+  .numbers,
+  .COLOURS {
+    margin-top: 20px; /* Add margin on top of content */
+  }
+  
+  .home h2 {
+    font-family: 'Comic Sans MS', cursive; /* Use a playful font for headings */
+    color: #333; /* Set color for headings */
+    margin-bottom: 10px; /* Add some margin below headings */
+  }
+  
+  .home p {
+    font-family: 'Comic Sans MS', cursive; /* Use a playful font for paragraphs */
+    color: #333; /* Set color for paragraphs */
+    margin-bottom: 10px; /* Add some margin below paragraphs */
+  }
+  
+  ion-img {
+    width: 100%; /* Set image width to 100% of its container */
+  }

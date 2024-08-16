@@ -1,0 +1,54 @@
+ body,html, p{
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:   #ffeecc;
+    font-size: 20px;
+}
+img{
+    align-content: flex-end;
+    height: min-content;
+    width: min-content;
+}
+.nav{
+    background-color:    #ffeecc;
+    padding-top: 10px;
+}
+.container1{
+    background-color:   #ffeecc;
+    text-align: center;
+    padding: 40px 60px;
+}
+@media only screen and (max-device-width: 1366px) {
+    .column{
+        column-span: inherit;
+    }
+    body, html, p{
+        font-size: 50px;
+    }
+  
+}
+h1{
+    color: #f5a70a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration:underline;
+}
+/*@media only screen and (max-device-width: 1366px) {
+    .nav, .parallax1, .parallax2, .parallax3{
+        background-size: cover;
+    }
+    .parallax1{
+        background-image: url("xan-griffin-eA2t5EvcxU4-unsplash.jpg");
+    }
+}*/
+li > a:hover,
+li > a:focus {
+    text-decoration: none;
+    border-width: 4px;
+    background-color: rgb(255, 174, 0);
+    border-radius: 30px;
+}
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+display: none;
+}

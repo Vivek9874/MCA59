@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Sorting</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(236, 229, 128) 35%, rgba(0,212,255,1) 100%);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+        .sorted-words {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .sorted-words p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <BR><BR>
+    <div class="container">
+        <h1>String Sorting</h1>
+        <p>Enter a sentence:</p>
+        <input type="text" id="inputField">
+        <button onclick="sortWords()">Sort</button>
+        <div id="output" class="sorted-words">
+        </div>
+        <script>
+            function sortWords() {
+                const inputField = document.getElementById("inputField");
+                const str = inputField.value;
+                const outputstr = document.getElementById("output");
+                outputstr.innerHTML = ''; 
+                if (str.trim() === '') {
+                    alert("Please enter a sentence.");
+                    return;
+                }
+                const inputstr = document.createElement('p');
+                inputstr.textContent = 'You entered: ' + str;
+                outputstr.appendChild(inputstr);
+                
+                const words = str.split(' ');
+                words.sort();
+
+                const boldParagraph = document.createElement('p');
+                boldParagraph.className = 'bold';
+                boldParagraph.textContent = 'The sorted words are:';
+                outputstr.appendChild(boldParagraph);
+
+                for (const element of words) {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = element;
+                    outputstr.appendChild(paragraph);
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

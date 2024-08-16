@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition of 2 numbers</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(236, 229, 128) 35%, rgba(0,212,255,1) 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="button"] {
+            background-color: rgb(0, 77, 105);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #answer {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <div class="container">
+        <h1>Addition of 2 numbers</h1>
+        <p>First number: <input type="number" id="number1"></p>
+        <p>Second number: <input type="number" id="number2"></p>
+        <p>Result: <input type="number" id="answer" disabled></p>
+        <input type="button" value="Add" onclick="add()">
+    </div>
+
+    <script>
+        function add() {
+            var n1, n2, ans;
+            n1 = parseFloat(document.getElementById("number1").value);
+            n2 = parseFloat(document.getElementById("number2").value);
+            ans = n1 + n2;
+            document.getElementById("answer").value = ans;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>LESSONS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item (click)="showContent('HOME')" class="menu-item">HOME</ion-item>
+      <ion-item (click)="showContent('ALPHABETS')" class="menu-item">ALPHABETS</ion-item>
+      <ion-item (click)="showContent('NUMBERS')" class="menu-item">NUMBERS</ion-item>
+      <ion-item (click)="showContent('COLOURS')" class="menu-item">COLOURS</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>LESSONS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    
+  <ion-content class="ion-padding main-content">
+
+    <div class="home" *ngIf="selectedContent === 'HOME'">
+      <h2>HELLO</h2>
+      <p>WELCOME TO KIDS ZONE.</p>
+      <p>LEARN ABOUT ALPHABETS, NUMBERS AND COLOURS FROM OUR APP.</p>
+      <ion-img [src]="'../../assets/Learnlogo.JPG'"></ion-img>
+    </div>
+
+    <div class="alphabets" *ngIf="selectedContent === 'ALPHABETS'">
+      <ion-img [src]="'../../assets/Alphabets.JPG'"></ion-img>
+    </div>
+
+    <div class="numbers" *ngIf="selectedContent === 'NUMBERS'">
+      <ion-img [src]="'../../assets/Numbers.JPG'"></ion-img>
+    </div>
+
+    <div class="COLOURS" *ngIf="selectedContent === 'COLOURS'">
+      <ion-img [src]="'../../assets/Colours.JPG'"></ion-img>
+    </div>
+
+  </ion-content>
+</div>

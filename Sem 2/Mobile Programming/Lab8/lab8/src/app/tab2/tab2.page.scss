@@ -1,0 +1,103 @@
+ion-toolbar {
+    --background: #000000; /* Black background for toolbar */
+    color: white; /* White text for better readability */
+    padding-bottom: 10px;
+    margin: auto;
+  }
+  
+  ion-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+                   'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 10px 20px;
+    color: white; /* White text for title on black background */
+  }
+  
+  page-calendar {
+    ion-header {
+      ion-toolbar {
+        ion-title {
+          text-align: center;
+        }
+      }
+    }
+  
+    ion-content {
+      background-color: #000000; /* Black background for content area */
+      color: white; /* White text for better readability */
+  
+      ion-calendar {
+        margin-top: 16px;
+      }
+  
+      ion-list {
+        ion-item {
+          ion-label {
+            font-weight: bold;
+            color: white; /* White text for labels */
+          }
+  
+          ion-buttons {
+            ion-button {
+              &.edit-button {
+                --color: var(--ion-color-primary);
+              }
+  
+              &.delete-button {
+                --color: var(--ion-color-danger);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .sec1 {
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+  
+  button {
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+                   'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    border: none; /* Removed border for cleaner look */
+    background-color: #007bff; /* Blue button for better contrast */
+    width: 40%;
+    height: 50px;
+    margin-left: 80px;
+    border-radius: 30px;
+    color: white; /* White text for better readability on button */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  button:hover {
+    background-color: #0d6aad; /* Darker blue on hover */
+    color: white; /* White text remains */
+  }
+  
+  .event {
+    margin-top: 30px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f5f5f5; /* Light gray background for event cards */
+    color: black; /* Black text for event content */
+  }
+  
+  ion-datetime {
+    border: 1px solid #ccc; /* Lighter border for datetime */
+    border-radius: 20px;
+    background-color: white; /* White background for datetime input */
+    color: black;
+  }
+  
+  p {
+    color: black; /* Black text for event titles */
+  }
+  

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tab 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" (click)="openCamera()">Camera</ion-button>
+  <ion-button expand="block" (click)="openGallery()">Gallery</ion-button>
+  <ion-button expand="block" (click)="captureImage()" *ngIf="showCamera">Capture Image</ion-button>
+  <video #video autoplay *ngIf="showCamera"></video>
+  <canvas #canvas *ngIf="showCamera"></canvas>
+
+  <div *ngIf="showGallery" class="gallery-container">
+    <ion-card *ngFor="let image of capturedImages; let i = index" class="gallery-card">
+      <img [src]="image" (click)="deleteImage(i)" class="gallery-image">
+      <ion-button (click)="deleteImage(i)" color="danger" class="delete-button">Delete</ion-button>
+    </ion-card>
+  </div>
+  
+  <input type="file" accept="image/*" (change)="selectFromGallery($event)" *ngIf="showGallery" class="gallery-input">
+</ion-content>

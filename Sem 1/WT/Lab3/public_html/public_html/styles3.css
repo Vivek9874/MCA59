@@ -1,0 +1,26 @@
+form{
+  border-color: #f5a70a;
+
+}
+textarea{
+    font-family: 'Times New Roman', Times, serif;
+    background-color:   #ffeecc;
+    font-size: 20px;
+    height: fit-content;
+}
+.comment-box{
+    padding: 20px;
+    margin-bottom: 4px;
+    background-color: #ffeecc;
+    border-radius: 10px;
+    border-color: #f5a70a;
+    border-style:solid;
+    border-spacing: 10px;
+}
+.bmar{
+    margin-bottom: 60px;
+}
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+display: none;
+}

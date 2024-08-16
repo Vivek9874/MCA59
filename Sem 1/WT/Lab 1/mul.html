@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(236, 229, 128) 35%, rgba(0, 212, 255, 1) 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: rgb(0, 77, 105);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        #answer {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <div class="container">
+        <h1>Multiplication</h1>
+        <p>Enter a number to generate its multiplication table:</p>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="generateTable()">Generate Table</button>
+        <br>
+        <h2>Multiplication Table</h2>
+        <div id="table"></div>
+        <br><br>
+    </div>
+
+    <script>
+        function generateTable() {
+            var number = parseInt(document.getElementById("numberInput").value);
+            var multable = document.getElementById("table");
+            multable.innerHTML = "";
+            var table = document.createElement("table");
+            for (var i = 1; i <= 10; i++) {
+                var row = table.insertRow();
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = number + " x " + i;
+                cell2.innerHTML = number * i;
+            }
+            multable.appendChild(table);
+        }
+    </script>
+</body>
+</html>

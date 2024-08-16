@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="form-title">Registration Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="form-content">
+  <ion-img src="../../assets/Logo.JPG" class="logo-image"></ion-img>
+  <form #form="ngForm" (ngSubmit)="submitForm(form)" class="form form-with-border">
+    <ion-list class="form-list">
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">Name </ion-label>
+        <ion-input type="text" [(ngModel)]="formData.name" name="name" class="form-input" required></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="formData.email" name="email" class="form-input" required></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">Contact</ion-label>
+        <ion-input type="tel" [(ngModel)]="formData.contact" name="contact" class="form-input" required></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">Roll No</ion-label>
+        <ion-input type="text" [(ngModel)]="formData.rollNo" name="rollNo" class="form-input" required></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">HSC</ion-label>
+        <ion-input type="text" [(ngModel)]="formData.hscCollege" name="hscCollege" class="form-input" placeholder="College" required></ion-input>
+        <ion-input type="text" [(ngModel)]="formData.hscYear" name="hscYear" class="form-input" placeholder="Year of Passing" required></ion-input>
+        <ion-input type="number" [(ngModel)]="formData.hscTotal" name="hscTotal" class="form-input" placeholder="Total" required></ion-input>
+        <ion-input type="number" [(ngModel)]="formData.hscOutof" name="hscOutof" class="form-input" placeholder="Out of" required></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">SSC</ion-label>
+        <ion-input type="text" [(ngModel)]="formData.sscCollege" name="sscCollege" class="form-input" placeholder="College" required></ion-input>
+        <ion-input type="text" [(ngModel)]="formData.sscYear" name="sscYear" class="form-input" placeholder="Year of Passing" required></ion-input>
+        <ion-input type="number" [(ngModel)]="formData.sscTotal" name="sscTotal" class="form-input" placeholder="Total" required></ion-input>
+        <ion-input type="number" [(ngModel)]="formData.sscOutof" name="sscOutof" class="form-input" placeholder="Out of" required></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">Semester Marks</ion-label>
+        <ion-input type="number" [(ngModel)]="formData.semesterCGPA" name="semesterCGPA" class="form-input" placeholder="CGPA" required></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">Additional Courses</ion-label>
+        <ion-input type="text" [(ngModel)]="formData.additionalCourses" name="additionalCourses" class="form-input"></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label class="form-label" color="primary">Resume</ion-label>
+        <ion-input type="file" (change)="handleFileUpload($event)" class="form-input" required></ion-input>
+      </ion-item>
+
+      <ion-button type="submit" [disabled]="form.invalid" expand="full" class="submit-button">Submit</ion-button>
+      <ion-button (click)="resetForm()" expand="full" color="danger" class="reset-button">Reset</ion-button>
+    </ion-list>
+  </form>
+  <div #toast></div>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registration Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img src="../../assets/Logo.JPG" class="logo-image"></ion-img>
+  <ion-list *ngIf="dataAvailable; else noData" class="registration-details">
+    <ion-item class="registration-item">
+      <ion-label class="registration-label">Name:</ion-label>
+      <ion-text class="registration-text">{{ name }}</ion-text>
+    </ion-item>
+    <ion-item class="registration-item">
+      <ion-label class="registration-label">Email:</ion-label>
+      <ion-text class="registration-text">{{ email }}</ion-text>
+    </ion-item>
+    <ion-item class="registration-item">
+      <ion-label class="registration-label">Contact:</ion-label>
+      <ion-text class="registration-text">{{ contact }}</ion-text>
+    </ion-item>
+    <ion-item class="registration-item">
+      <ion-label class="registration-label">Roll No:</ion-label>
+      <ion-text class="registration-text">{{ rollNo }}</ion-text>
+    </ion-item>
+    <ion-item class="registration-item">
+      <ion-label class="registration-label">HSC:</ion-label>
+      <ion-text class="registration-text">
+        <span>{{ hscCollege }} | {{ hscYear }} | </span>
+        <span class="registration-subtext">{{ hscTotal }}/{{ hscOutof }} = {{ hscPercentage}}</span>
+      </ion-text>
+    </ion-item>
+    <ion-item *ngIf="sscCollege || sscYear || sscTotal || sscOutof" class="registration-item">
+      <ion-label class="registration-label">SSC:</ion-label>
+      <ion-text class="registration-text">
+        <span>{{ sscCollege }} | {{ sscYear }} | </span>
+        <span class="registration-subtext">{{ sscTotal }}/{{ sscOutof }} = {{ sscPercentage}}</span>
+      </ion-text>
+    </ion-item>
+    <ion-item class="registration-item">
+      <ion-label class="registration-label">Semester Marks:</ion-label>
+      <ion-text class="registration-text">{{ semesterCGPA }} CGPA</ion-text>
+    </ion-item>
+    <ion-item class="registration-item">
+      <ion-label class="registration-label">Additional Courses:</ion-label>
+      <ion-text class="registration-text">{{ additionalCourses }}</ion-text>
+    </ion-item>
+    <ion-item *ngIf="resume" class="registration-item">
+      <ion-label class="registration-label">Resume:</ion-label>
+      <ion-text (click)="openResume()">{{ resume.name }}</ion-text>
+    </ion-item>
+  </ion-list>
+  <ng-template #noData>
+    <ion-text class="no-data-message">Please fill the registration form.</ion-text>
+  </ng-template>
+</ion-content>

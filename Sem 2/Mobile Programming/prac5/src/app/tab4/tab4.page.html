@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PROFILE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="!submitted" class="form-container">
+    <ion-label class="form-label">CHOOSE YOUR DISPLAY PICTURE</ion-label>
+    <div class="grid-container">
+      <div *ngFor="let image of images" class="grid-item" (click)="selectImage(image)" [class.selected]="selectedImage === '../../assets/' + image + '.JPG'">
+        <ion-avatar>
+          <ion-img [src]="'../../assets/' + image + '.JPG'"></ion-img>
+        </ion-avatar>
+      </div>
+    </div>
+    <div class="form-fields">
+      <ion-item class="form-item">
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" [(ngModel)]="name" class="form-input"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="floating">Gender</ion-label>
+        <ion-select [(ngModel)]="gender" class="form-select" interface="popover">
+          <ion-select-option value="Male">Male</ion-select-option>
+          <ion-select-option value="Female">Female</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="floating">AGE</ion-label>
+        <ion-input type="text" [(ngModel)]="dob" class="form-input"></ion-input>
+      </ion-item>
+    </div>
+    <ion-button (click)="submitForm()" expand="full" class="form-button">Submit</ion-button>
+  </div>
+
+  <div *ngIf="submitted" class="submitted-container">
+    <ion-avatar class="selected-image">
+      <ion-img [src]="selectedImage"></ion-img>
+    </ion-avatar>
+    <h2 class="submitted-text">Name: {{ name }}</h2>
+    <h2 class="submitted-text">Gender: {{ gender }}</h2>
+    <h2 class="submitted-text">AGE: {{ dob }}</h2>
+  </div>
+
+  <div class="edit-button-container">
+    <ion-button *ngIf="submitted" (click)="editForm()" expand="full" class="edit-button">Edit</ion-button>
+  </div>
+</ion-content>
